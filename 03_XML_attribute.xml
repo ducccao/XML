@@ -1,0 +1,19 @@
+<person gender="female"></person>
+
+<skater name='duccao "99" caoduc'></skater>
+
+<skater name="abc &lta; abc &quot;"></skater>
+
+
+
+<person gender="male">
+    <firstname>nhung</firstname>
+    <lastname>bui</lastname>
+</person>
+
+<person>
+    <firstname>nhung</firstname>
+    <lastname>bui</lastname>
+    <gender>male</gender>
+</person>
+

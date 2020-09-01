@@ -1,0 +1,27 @@
+
+
+<bookstore>
+<book category="children" >
+<title>Harry Potter</title>
+<author>JK Rowling</author>
+<year>2005</year>
+<price>30</price>
+</book>
+
+<book category="web" >
+<title>Learning XML</title>
+<author>Duc Cao</author>
+<year>2020</year>
+<price>99</price>
+</book>
+</bookstore>
+
+
+<!-- Naming styles 
+1. lower case - <nhungbui></nhungbui>
+2. upper case - <NHUNGBUI></NHUNGBUI>
+3. underscore - <nhung_bui></nhung_bui>
+4. pascal case - <NhungBui></NhungBui>
+5. camel case - <nhungBui></nhungBui>
+
+ -->
