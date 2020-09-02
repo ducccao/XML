@@ -1,0 +1,50 @@
+<root>
+  <person gender="female"></person>
+  
+  <skater name='duccao "99" caoduc'></skater>
+  
+  <!-- <skater name="abc &lta; abc &quot;"></skater> -->
+  
+  
+  
+  <!-- <person gender="male">
+      <firstname>nhung</firstname>
+      <lastname>bui</lastname>
+  </person>
+  
+  <person>
+      <firstname>nhung</firstname>
+      <lastname>bui</lastname>
+      <gender>male</gender>
+  </person> -->
+  
+  
+  <!--
+  attributes cannot contain multiple values (elements can)
+  attributes cannot contain tree structures (elements can)
+  attributes are not easily expandable (for future changes)
+  
+  
+  The id attributes above are for identifying the different notes. It is not a part of the note itself.
+  
+  What I'm trying to say here is that metadata (data about data) should be stored as attributes, and the data itself should be stored as elements.
+  -->
+  
+  <messages>
+    <note id="501">
+      <to>nhungbui</to>
+      <from>duccao</from>
+      <heading>Reminder</heading>
+      <body>Don't forget me this weekend!</body>
+    </note>
+    <note id="502">
+      <to>nhungbui</to>
+      <from>duccao</from>
+      <heading>Re: Reminder</heading>
+      <body>I will not</body>
+    </note>
+  </messages>
+
+
+  
+</root>

@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      let log = console.log;
+      var text, parser, xmlDoc;
+
+      text =
+        "<bookstore><book>" +
+        "<title>Everyday Italian</title>" +
+        "<author>Giada De Laurentiis</author>" +
+        "<year>2005</year>" +
+        "</book></bookstore>";
+
+      parser = new DOMParser();
+      xmlDoc = parser.parseFromString(text, "text/xml");
+
+      document.getElementById("demo").innerHTML = xmlDoc.getElementsByTagName(
+        "title"
+      )[0].childNodes[0].nodeValue;
+
+      var t2 =
+        "<person>" +
+        "<name>nhungbui</name>" +
+        "<major>carrying the entire team</major> " +
+        "</person>";
+
+      var parser2 = new DOMParser();
+      var xmlDoc2 = parser2.parseFromString(t2, "text/xml");
+
+      log(xmlDoc2);
+
+      log(
+        (document.getElementById(
+          "demo"
+        ).innerHTML = xmlDoc2.getElementsByTagName(
+          "name"
+        )[0].childNodes[0].nodeValue)
+      );
+    </script>
+  </body>
+</html>

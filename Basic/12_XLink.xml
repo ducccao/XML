@@ -1,0 +1,76 @@
+<!--
+    XLink is used to create hyperlinks in XML documents.
+    XLink is used to create hyperlinks within XML documents
+Any element in an XML document can behave as a link
+With XLink, the links can be defined outside the linked files
+XLink is a W3C Recommendation
+-->
+
+<!--
+    XLink Browser Support
+There is no browser support for XLink in XML documents.
+
+However, all major browsers support XLinks in SVG.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<homepages xmlns:xlink="http://www.w3.org/1999/xlink">
+  <homepage xlink:type="simple" xlink:href="https://www.w3schools.com">Visit W3Schools</homepage>
+  <homepage xlink:type="simple" xlink:href="http://www.w3.org">Visit W3C</homepage>
+</homepages>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<book title="Harry Potter">
+  <description
+  xlink:type="simple"
+  xlink:href="/images/HPotter.gif"
+  xlink:show="new">
+  As his fifth year at Hogwarts School of Witchcraft and
+  Wizardry approaches, 15-year-old Harry Potter is.......
+  </description>
+</book>
+
+<book title="XQuery Kick Start">
+  <description
+  xlink:type="simple"
+  xlink:href="/images/XQuery.gif"
+  xlink:show="new">
+  XQuery Kick Start delivers a concise introduction
+  to the XQuery standard.......
+  </description>
+</book>
+
+</bookstore>
+
+<!--
+    The XLink namespace is declared at the top of the document (xmlns:xlink="http://www.w3.org/1999/xlink")
+The xlink:type="simple" creates a simple "HTML-like" link
+The xlink:href attribute specifies the URL to link to (in this case - an image)
+The xlink:show="new" specifies that the link should open in a new window
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dogbreeds>
+
+<dog breed="Rottweiler" id="Rottweiler">
+  <picture url="https://dog.com/rottweiler.gif" />
+  <history>The Rottweiler's ancestors were probably Roman
+  drover dogs.....</history>
+  <temperament>Confident, bold, alert and imposing, the Rottweiler
+  is a popular choice for its ability to protect....</temperament>
+</dog>
+
+<dog breed="FCRetriever" id="FCRetriever">
+  <picture url="https://dog.com/fcretriever.gif" />
+  <history>One of the earliest uses of retrieving dogs was to
+  help fishermen retrieve fish from the water....</history>
+  <temperament>The flat-coated retriever is a sweet, exuberant,
+  lively dog that loves to play and retrieve....</temperament>
+</dog>
+
+</dogbreeds>

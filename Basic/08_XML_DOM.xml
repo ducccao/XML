@@ -1,0 +1,25 @@
+<!--
+    "The W3C Document Object Model (DOM) is a platform and
+     language-neutral interface that allows programs and scripts 
+     to dynamically access and update the content, structure, and style of a document."
+
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+
+  <book category="children">
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+
+</bookstore>

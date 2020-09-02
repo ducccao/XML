@@ -1,0 +1,129 @@
+<!--
+
+    If these XML fragments were added together, there would be a name conflict. Both contain a <table> element, but the elements have different content and meaning.
+
+A user or an XML application will not know how to handle these differences.
+-->
+
+<table>
+  <name>African Coffee Table</name>
+  <width>80</width>
+  <length>120</length>
+</table>
+
+<table>
+  <tr>
+    <td>Apples</td>
+    <td>Bananas</td>
+  </tr>
+</table>
+
+<!-- xml application will not understand -->
+
+<!-- Solving the Name Conflict Using a Prefix
+Name conflicts in XML can easily be avoided using a name prefix.
+
+This XML carries information about an HTML table, and a piece of furniture:
+ -->
+
+ <h:table>
+  <h:tr>
+    <h:td>Apples</h:td>
+    <h:td>Bananas</h:td>
+  </h:tr>
+</h:table>
+
+<f:table>
+  <f:name>African Coffee Table</f:name>
+  <f:width>80</f:width>
+  <f:length>120</f:length>
+</f:table>
+
+<!--
+    XML Namespaces - The xmlns Attribute
+When using prefixes in XML, a namespace for the prefix must be defined.
+
+The namespace can be defined by an xmlns attribute in the start tag of an element.
+
+The namespace declaration has the following syntax. xmlns:prefix="URI".
+-->
+<root>
+<h:table xmlns:h="https://www.black.com/">
+    <h:tr>
+        <h:td>apples</h:td>
+        <h:td>bananas</h:td>
+    </h:tr>
+</h:table>
+</root>
+
+
+<f:table xmlns:f="https://www.w3schools.com/furniture">
+  <f:name>African Coffee Table</f:name>
+  <f:width>80</f:width>
+  <f:length>120</f:length>
+</f:table>
+
+
+<!--
+
+    When a namespace is defined for an element, all child elements with the same prefix are associated with the same namespace.
+
+Namespaces can also be declared in the XML root element
+-->
+
+<root xmlns:h="http://www.w3.org/TR/html4/"
+xmlns:f="https://www.w3schools.com/furniture">
+
+<h:table>
+  <h:tr>
+    <h:td>Apples</h:td>
+    <h:td>Bananas</h:td>
+  </h:tr>
+</h:table>
+
+<f:table>
+  <f:name>African Coffee Table</f:name>
+  <f:width>80</f:width>
+  <f:length>120</f:length>
+</f:table>
+
+</root>
+
+
+<!--
+Namespaces in Real Use
+XSLT is a language that can be used to transform XML documents into other formats.
+
+The XML document below, is a document used to transform XML into HTML.
+
+The namespace "http://www.w3.org/1999/XSL/Transform" identifies XSLT elements inside an HTML document:
+
+-->
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+<body>
+  <h2>My CD Collection</h2>
+  <table border="1">
+    <tr>
+      <th style="text-align:left">Title</th>
+      <th style="text-align:left">Artist</th>
+    </tr>
+    <xsl:for-each select="catalog/cd">
+    <tr>
+      <td><xsl:value-of select="title"/></td>
+      <td><xsl:value-of select="artist"/></td>
+    </tr>
+    </xsl:for-each>
+  </table>
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>

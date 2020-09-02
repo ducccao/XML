@@ -1,0 +1,17 @@
+
+    for $x in doc("books.xml")/bookstore/book
+where $x/price>30
+order by $x/title
+return $x/title
+
+for $x in doc("books.")
+
+
+<!--
+    XQuery is About Querying XML
+XQuery is a language for finding and extracting elements and attributes from XML documents.
+
+Here is an example of what XQuery could solve:
+
+"Select all CD records with a price less than $10 from the CD collection stored in cd_catalog.xml"
+-->
